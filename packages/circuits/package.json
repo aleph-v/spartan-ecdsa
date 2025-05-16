@@ -9,7 +9,9 @@
     "circom_tester": "^0.0.19",
     "circomlib": "^2.0.5",
     "circomlibjs": "^0.1.7",
-    "elliptic": "^6.5.4"
+    "elliptic": "^6.5.4",
+    "@zk-email/circuits": "^6.3.3-nightly-20250214",
+    "@zk-email/helpers": "^6.4.2"
   },
   "devDependencies": {
     "@personaelabs/spartan-ecdsa": "*",

@@ -24,7 +24,7 @@ template Secp256k1Mul() {
     signal output outX;
     signal output outY;
 
-    component kBits = K();
+    component kBits = K_add();
     kBits.s <== scalar;
 
     component acc0 = Secp256k1Double();
@@ -107,7 +107,7 @@ template Secp256k1Mul() {
 // We can calculate the quotient and remainder as:
 // (s + tQ) < q ? = (0, s - tQ) : (1, (s - tQ) - q)
 // We use 128-bit registers to calculate the above since (s + tQ) can be larger than p.
-template K() {
+template K_add() {
     var bits = 256;
     signal input s;
     signal output out[bits];
